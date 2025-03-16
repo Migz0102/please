@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            background: #28a745;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #28a745;
+            color: white;
+        }
+        .media img, .media video {
+            width: 300px;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="content" class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my learning journey through the third and fourth quarters.</p>
+        <a href="https://migz0102.github.io/ICT-Q1-PT/" target="_blank">QTR1</a>
+        <a href="https://drive.google.com/drive/u/0/folders/1FEv3sDDjzmjXkxiEd_lT9vhCwA6bFcZq" target="_blank">QTR2</a>
+        <button onclick="loadNavigation()">Go to Navigation</button>
+    </div>
+
+    <script>
+        function loadNavigation() {
+            document.getElementById("content").innerHTML = `
+                <h1>Navigation</h1>
+                <h2>3rd Quarter Lessons</h2>
+                <table>
+                    <tr><th>Lesson</th><th>Activity</th><th>Importance</th></tr>
+                    <tr><td>JavaScript Basics</td><td><button onclick="startActivity('q3l1')">Start</button></td><td>Understanding core JS</td></tr>
+                    <tr><td>Variables and Data Types</td><td><button onclick="startActivity('q3l2')">Start</button></td><td>Storing values effectively</td></tr>
+                    <tr><td>Operators</td><td><button onclick="startActivity('q3l3')">Start</button></td><td>Performing calculations</td></tr>
+                    <tr><td>Functions</td><td><button onclick="startActivity('q3l4')">Start</button></td><td>Reusable code blocks</td></tr>
+                    <tr><td>Events</td><td><button onclick="startActivity('q3l5')">Start</button></td><td>Interactive web elements</td></tr>
+                    <tr><td>Objects</td><td><button onclick="startActivity('q3l6')">Start</button></td><td>Organizing complex data</td></tr>
+                </table>
+                <h2>4th Quarter Lessons</h2>
+                <table>
+                    <tr><th>Lesson</th><th>Activity</th><th>Importance</th></tr>
+                    <tr><td>Conditional Statements</td><td><button onclick="startActivity('q4l1')">Start</button></td><td>Making decisions in code</td></tr>
+                    <tr><td>Loops</td><td><button onclick="startActivity('q4l2')">Start</button></td><td>Automating tasks</td></tr>
+                    <tr><td>Arrays</td><td><button onclick="startActivity('q4l3')">Start</button></td><td>Handling lists of data</td></tr>
+                    <tr><td>DOM Manipulation</td><td><button onclick="startActivity('q4l4')">Start</button></td><td>Modifying web pages dynamically</td></tr>
+                </table>
+                <button onclick="loadReflection()">Go to Reflection</button>
+            `;
+        }
+
+        function loadReflection() {
+            document.getElementById("content").innerHTML = `
+                <h1>Reflection Page</h1>
+                <div class="media">
+                    <img src="images/484335878_1018797443748877_8240492235777324508_n.jpg" alt="3rd qtr Reflection Image 1">
+                    <img src="images/484301614_1624214241558328_4177152967345898816_n.jpg" alt="3rd qtr Reflection Image 2">
+                    <img src="images/483309817_1413189693012166_7831180986084464347_n.jpg" alt="3rd qtr Reflection Image 3">
+                    <img src="images/483338980_1169620174717523_6320537690618171155_n.jpg" alt="Reflection Image 1">
+                    <img src="images/483389457_584240667993348_3905308084060202515_n.jpg" alt="Reflection Image 2">
+                    <img src="images/483218910_1014828613904618_2078152827938829686_n.jpg" alt="Reflection Image 3">
+                    <img src="images/483889826_683008207636379_4077761179669779168_n.jpg" alt="Reflection Image 4">
+                    <video controls>
+                    <source src="videos/484070328_9704092793045239_3891865848868986677_n.mp4" type="video/mp4">
+                </div>
+                <button onclick="loadThankYou()">Finish Portfolio</button>
+            `;
+        }
+
+        function loadThankYou() {
+            document.getElementById("content").innerHTML = `
+                <h1>Thank You for Viewing My Portfolio!</h1>
+                <button onclick="location.reload()">Back to Start</button>
+            `;
+        }
+
+        function startActivity(activity) {
+            window.location.href = `activities/${activity}.html`;
+        }
+    </script>
+</body>
+</html>

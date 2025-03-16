@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements Activity</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Conditional Statements Activity</h1>
+    <p>Enter a number to check if it is positive, negative, or zero.</p>
+    <input type="number" id="numberInput">
+    <button onclick="checkNumber()">Check</button>
+    <p id="result"></p>
+    <button onclick="goBack()">Back to Portfolio</button>
+    
+    <script>
+        function checkNumber() {
+            let num = parseFloat(document.getElementById('numberInput').value);
+            let message = "";
+            if (num > 0) {
+                message = "The number is positive.";
+            } else if (num < 0) {
+                message = "The number is negative.";
+            } else {
+                message = "The number is zero.";
+            }
+            document.getElementById('result').innerText = message;
+        }
+        function goBack() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

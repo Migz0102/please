@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Activity</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Events Activity</h1>
+    <p>Click the button to change the text below.</p>
+    <button onclick="changeText()">Click Me</button>
+    <p id="eventText">This text will change.</p>
+    <button onclick="goBack()">Back to Portfolio</button>
+    
+    <script>
+        function changeText() {
+            document.getElementById('eventText').innerText = 'Text has been changed!';
+        }
+        function goBack() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

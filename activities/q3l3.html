@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators Activity</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Operators Activity</h1>
+    <p>Enter two numbers to add them together.</p>
+    <input type="number" id="num1"> +
+    <input type="number" id="num2">
+    <button onclick="calculateSum()">Calculate</button>
+    <p id="result"></p>
+    <button onclick="goBack()">Back to Portfolio</button>
+    
+    <script>
+        function calculateSum() {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let sum = num1 + num2;
+            document.getElementById('result').innerText = "Sum: " + sum;
+        }
+        function goBack() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

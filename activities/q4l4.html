@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Activity</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { padding: 10px; margin-top: 20px; }
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Manipulation Activity</h1>
+    <p>Click the button to change the color of the box below.</p>
+    <div id="box"></div>
+    <button onclick="changeColor()">Change Color</button>
+    <button onclick="goBack()">Back to Portfolio</button>
+    
+    <script>
+        function changeColor() {
+            let box = document.getElementById('box');
+            let colors = ['red', 'green', 'blue', 'yellow', 'purple'];
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            box.style.backgroundColor = randomColor;
+        }
+        function goBack() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

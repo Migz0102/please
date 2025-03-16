@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Activity</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Objects Activity</h1>
+    <p>Click the button to display details about a car object.</p>
+    <button onclick="showCarDetails()">Show Car</button>
+    <p id="objectOutput"></p>
+    <button onclick="goBack()">Back to Portfolio</button>
+    
+    <script>
+        function showCarDetails() {
+            let car = {
+                make: "Toyota",
+                model: "Corolla",
+                year: 2022
+            };
+            document.getElementById('objectOutput').innerText = `Make: ${car.make}, Model: ${car.model}, Year: ${car.year}`;
+        }
+        function goBack() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

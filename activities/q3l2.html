@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Data Types Activity</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Variables and Data Types Activity</h1>
+    <p>Click the button to declare a variable and display its value.</p>
+    <button onclick="showVariable()">Show Variable</button>
+    <p id="variableOutput"></p>
+    <button onclick="goBack()">Back to Portfolio</button>
+    
+    <script>
+        function showVariable() {
+            let myVariable = "JavaScript is awesome!";
+            document.getElementById('variableOutput').innerText = myVariable;
+        }
+        function goBack() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>
